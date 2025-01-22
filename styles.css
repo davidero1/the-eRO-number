@@ -696,7 +696,7 @@ h1 {
   
   .left {
     width: 30vw;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
