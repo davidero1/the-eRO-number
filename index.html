@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Guess My Number!</title>
+  </head>
+
+  <body>
+    <section class="hero">
+      
+      <div class="logobox">
+        <div class="lb1">
+          <img src="images/DAVID ēRO™ text white - DAVID.png" class="lb1-img" width="auto" height="auto" alt="" srcset="">
+        </div>
+        <div class="lb2">
+          <img src="images/DAVID ēRO™ text white - ēRO.png" class="lb2-img" width="auto" height="auto" alt="" srcset="">
+        </div>
+        <h5>THE <span class="redspan">ēRO™ </span>NUMBER</h5>
+      </div>
+
+      <header>
+        <h1>GUESS THE NUMBER</h1>
+        <p class="between">(Between 1 and 20)</p>
+        <button class="btn again">Try Again</button>
+        <div class="number">?</div>
+      </header>
+
+      <main>
+        <section class="game-container">
+          <section class="right">
+            <p class="message">Start guessing...</p>
+          </section>
+
+          <section class="left">
+            <input type="number" class="guess" placeholder="Your guess..." />
+
+            <button class="btn check">Check!</button> 
+
+            <br />
+
+            <p class="label-score">💯 Score: <span class="score">20</span></p>
+
+            <p class="label-highscore">
+              🥇 Highscore: 
+              <span class="highscore">0</span>
+            </p>
+          </section>
+        </section>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

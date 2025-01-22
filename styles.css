@@ -1,0 +1,783 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  /* SCROLL BAR*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0.2vw;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #be0032;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #be0032;
+    width: 0.5vw;
+  }
+}
+
+body {
+  font-family: "Courier Prime", "Roboto Mono", "Space Grotesk", sans-serif;
+}
+
+.hero {
+  background-color: #be0032;
+  width: 100%;
+  height: 105vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.logobox {
+  height: 30vh;
+  width: 20vw;
+  position: absolute;
+  left: 2vw;
+  top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.lb1 {
+  width: 15vw;
+  height: 9vh;
+}
+
+.lb1-img {
+  height: 8.5vh;
+}
+
+.lb2 {
+  width: 16vw;
+  height: 16vh;
+  margin-top: -3vh;
+}
+
+.lb2-img {
+  height: 15vh;
+}
+
+h5 {
+  font-family:  "Courier Prime", sans-serif;;
+  color: white;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 2.1vh;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+  text-align: left;
+  margin-left: 2vw;
+}
+
+.redspan {
+  color: white;
+  text-shadow: none;
+  font-weight: 500;
+  font-size: 2.5vh;
+  /* text-shadow: 2px 2px 10px black; */
+}
+
+/* LAYOUT */
+header {
+  background-image: url("images/IMG_1805.JPG");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position-x: 100%;
+  background-position-y: 30%;
+  background-size: cover;
+  background-origin: padding-box;
+  z-index: 0;
+  object-fit: cover;
+  object-position: 100% 100%;
+  width: 94vw;
+  height: 44vh;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  height: 45vh;
+  padding: 20px;
+  background-color: black;
+  z-index: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  font-family: "Courier Prime", sans-serif;
+  font-size: 5vh;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 0.3rem;
+  text-shadow: 2px 2px 10px black;
+}
+
+.number {
+  background: #fff;
+  color: black;
+  font-size: 6rem;
+  padding: 1rem;
+  width: 14rem;
+  margin: 20px auto;
+  border-radius: 0.1vw;
+  box-shadow: 2px 2px 5px black;
+}
+
+.between {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.2rem;
+  margin-top: -2px;
+  color: white;
+  font-weight: 100;
+  text-shadow: 2px 2px 10px black;
+}
+
+.again {
+  margin-top: 10px;
+}
+
+.game-container {
+ 
+}
+
+.right {
+  width: 50vw;
+}
+
+.message {
+  font-family: "Courier Prime", sans-serif;
+  color: white;
+  font-size: 3vh;
+}
+
+.guess {
+  border-bottom: 2px solid #006aad;
+  border-top: 2px solid #006aad;
+  font-family: "Roboto Mono", sans-serif;
+  color: black;
+  font-size: 4vh;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  width: 50%;
+  height: 8vh;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.guess::placeholder {
+  font-size: 1.6rem;
+  color: #969696;
+}
+
+.guess:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+.btn {
+  font-family: "Roboto Mono", sans-serif;
+  border: none;
+  background-color: #006aad;
+  color: #fff;
+  font-size: 2.2vh;
+  width: 10vw;
+  border-radius: 0.1vw;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px black;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #032b44;
+}
+
+.message {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 2vh;
+  margin-bottom: 1rem;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+.score,
+.highscore {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 3vh;
+}
+
+.check {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+/* iPad */
+
+@media (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* SCROLL BAR*/
+    /* width */
+    ::-webkit-scrollbar {
+      width: 0.2vw;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: black;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #be0032;
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #be0032;
+      width: 0.5vw;
+    }
+  }
+  
+  body {
+    font-family: "Courier Prime", "Roboto Mono", "Space Grotesk", sans-serif;
+  }
+  
+  .hero {
+    background-color: #be0032;
+    width: 100%;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .logobox {
+    height: 12vh;
+    width: 18vw;
+    position: absolute;
+    left: 2vw;
+    top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    margin-left: 1vw;
+  }
+  
+  .lb1 {
+    width: 15vw;
+    height: 5vh;
+  }
+  
+  .lb1-img {
+    height: 2.8vh;
+  }
+  
+  .lb2 {
+    width: 16vw;
+    height: 6vh;
+    margin-top: -3vh;
+  }
+  
+  .lb2-img {
+    height: 5vh;
+  }
+  
+  h5 {
+    font-family:  "Courier Prime", sans-serif;;
+    color: white;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 0.8vh;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    text-align: left;
+    margin-left: 1.8vw;
+  }
+  
+  .redspan {
+    color: white;
+    text-shadow: none;
+    font-weight: 500;
+    font-size: 1vh;
+    /* text-shadow: 2px 2px 10px black; */
+  }
+  
+  /* LAYOUT */
+  header {
+    background-image: url("images/IMG_1805.JPG");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-x: 100%;
+    background-position-y: 30%;
+    background-size: cover;
+    background-origin: padding-box;
+    z-index: 0;
+    object-fit: cover;
+    object-position: 100% 100%;
+    width: 94vw;
+    height: 40vh;
+    padding-top: 4vh;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    height: 45vh;
+    padding: 20px;
+    background-color: black;
+    z-index: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ELEMENTS STYLE */
+  h1 {
+    font-family: "Courier Prime", sans-serif;
+    font-size: 2.2vh;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px 10px black;
+  }
+  
+  .number {
+    background: #fff;
+    color: black;
+    font-size: 6rem;
+    padding: 1rem;
+    width: 30rem;
+    margin: 20px auto;
+    margin-top: 3vh;
+    border-radius: 0.1vw;
+    box-shadow: 2px 2px 5px black;
+  }
+  
+  .between {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 1.2rem;
+    margin-top: -2px;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 10px black;
+  }
+  
+  .again {
+    margin-top: 10px;
+  }
+  
+  .game-container {
+    height: 40vh;
+    padding: 0;
+    display: flex;
+  }
+  
+  .left {
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+
+  .right {
+    width: 50vw;
+  }
+  
+  .message {
+    font-family: "Courier Prime", sans-serif;
+    color: white;
+    font-size: 9vh;
+  }
+  
+  .guess {
+    border-bottom: 2px solid #006aad;
+    border-top: 2px solid #006aad;
+    font-family: "Roboto Mono", sans-serif;
+    color: black;
+    font-size: 4vh;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    transition: border-color 0.3s;
+    margin-bottom: 2vh;
+  }
+  
+  .guess::placeholder {
+    font-size: 1.6rem;
+    color: #969696;
+  }
+  
+  .guess:focus {
+    outline: none;
+    border-color: #28a745;
+  }
+  
+  .btn {
+    font-family: "Roboto Mono", sans-serif;
+    border: none;
+    background-color: #006aad;
+    color: #fff;
+    font-size: 1.2vh;
+    width: 15vw;
+    border-radius: 0.1vw;
+    padding: 1rem 2rem;
+    margin-top: 5vh;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px black;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #032b44;
+  }
+  
+  .message {
+    margin: 20px 0;
+    font-size: 5.2vh;
+    text-align: left;
+    margin-top: 12vh;
+  }
+  
+  .label-score,
+  .label-highscore {
+    font-size: 2vh;
+    margin-bottom: 1rem;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 200;
+    color: white;
+  }
+  
+  .score,
+  .highscore {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 3vh;
+  }
+  
+  .check {
+    display: block;
+    margin: auto;
+    margin-top: 1vh;
+    font-size: 2.2vh;
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* SCROLL BAR*/
+    /* width */
+    ::-webkit-scrollbar {
+      width: 0.2vw;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: black;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #be0032;
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #be0032;
+      width: 0.5vw;
+    }
+  }
+  
+  body {
+    font-family: "Courier Prime", "Roboto Mono", "Space Grotesk", sans-serif;
+  }
+  
+  .hero {
+    background-color: #be0032;
+    width: 100%;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .logobox {
+    height: 8vh;
+    width: 18vw;
+    position: absolute;
+    left: 2vw;
+    top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 1vh;
+    margin-left: 1.5vw;
+  }
+  
+  .lb1 {
+    width: 15vw;
+    height: 5vh;
+  }
+  
+  .lb1-img {
+    height: 1.8vh;
+  }
+  
+  .lb2 {
+    width: 16vw;
+    height: 6vh;
+    margin-top: -2vh;
+  }
+  
+  .lb2-img {
+    height: 3vh;
+  }
+  
+  h5 {
+    font-family:  "Courier Prime", sans-serif;;
+    color: white;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 0.8vh;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    text-align: left;
+    margin-left: 1.8vw;
+  }
+  
+  .redspan {
+    color: white;
+    text-shadow: none;
+    font-weight: 500;
+    font-size: 1vh;
+    /* text-shadow: 2px 2px 10px black; */
+  }
+  
+  /* LAYOUT */
+  header {
+    background-image: url("images/IMG_1805.JPG");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-x: 100%;
+    background-position-y: 30%;
+    background-size: cover;
+    background-origin: padding-box;
+    z-index: 0;
+    object-fit: cover;
+    object-position: 100% 100%;
+    width: 94vw;
+    height: 40vh;
+    padding-top: 4vh;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    height: 45vh;
+    padding: 20px;
+    background-color: black;
+    z-index: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ELEMENTS STYLE */
+  h1 {
+    font-family: "Courier Prime", sans-serif;
+    font-size: 1.8vh;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px 10px black;
+  }
+  
+  .number {
+    background: #fff;
+    color: black;
+    font-size: 6rem;
+    padding: 1rem;
+    width: 20rem;
+    margin: 20px auto;
+    margin-top: 3vh;
+    border-radius: 0.1vw;
+    box-shadow: 2px 2px 5px black;
+  }
+  
+  .between {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 1rem;
+    margin-top: -2px;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 10px black;
+  }
+  
+  .again {
+    margin-top: 10px;
+  }
+  
+  .game-container {
+    height: 40vh;
+    padding: 0;
+    display: flex;
+  }
+  
+  .left {
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+
+  .right {
+    width: 50vw;
+  }
+  
+  .guess {
+    border-bottom: 2px solid #006aad;
+    border-top: 2px solid #006aad;
+    font-family: "Roboto Mono", sans-serif;
+    color: black;
+    font-size: 2vh;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    transition: border-color 0.3s;
+    margin-bottom: 2vh;
+  }
+  
+  .guess::placeholder {
+    font-size: 1vh;
+    color: #969696;
+  }
+  
+  .guess:focus {
+    outline: none;
+    border-color: #28a745;
+  }
+  
+  .btn {
+    font-family: "Roboto Mono", sans-serif;
+    border: none;
+    background-color: #006aad;
+    color: #fff;
+    font-size: 1.2vh;
+    width: 25vw;
+    border-radius: 0.1vw;
+    padding: 1rem 2rem;
+    margin-top: 5vh;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px black;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #032b44;
+  }
+  
+  .message {
+    font-family: "Courier Prime", sans-serif;
+    margin: 20px 0;
+    font-size: 3vh;
+    text-align: left;
+    margin-top: 4vh;
+  }
+  
+  .label-score,
+  .label-highscore {
+    font-size: 1.2vh;
+    margin-bottom: 1rem;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 200;
+    color: white;
+  }
+  
+  .score,
+  .highscore {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 2.6vh;
+  }
+  
+  .check {
+    display: block;
+    margin: auto;
+    margin-top: 1vh;
+    font-size: 2.2vh;
+  }
+}
